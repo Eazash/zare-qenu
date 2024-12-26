@@ -14,6 +14,7 @@
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.8.1",
+    "@nuxthub/core": "0.8.10",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "nuxt": "^3.15.0",
     "temporal-polyfill": "^0.2.5",
@@ -22,6 +23,7 @@
   },
   "packageManager": "pnpm@9.15.1",
   "devDependencies": {
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "wrangler": "^3.99.0"
   }
 }
