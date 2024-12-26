@@ -11,12 +11,22 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/image',
-    '@nuxthub/core'
+    '@nuxthub/core',
+    '@nuxtjs/sitemap'
   ],
   eslint: {
-    config : {
+    config: {
       stylistic: false,
       standalone: false
     }
+  },
+  site: {
+    url: "https://zare-qenu.com",
+    name: "Zare Qenu",
+  },
+  sitemap: {
+    sources: [
+      '/api/__sitemap__/urls',
+    ]
   }
 })
