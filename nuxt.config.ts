@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  experimental: {
+    componentIslands: true,
+  },
   future: {
     compatibilityVersion: 4,
   },
@@ -26,6 +29,15 @@ export default defineNuxtConfig({
     analytics: true,
 
   },
+  nitro: {
+    routeRules: {
+      '/' : {
+        cache: {
+          maxAge: 60 * 60 * 24
+        },
+      }
+    }
+  },
   site: {
     url: "https://zare-qenu.com",
     name: "Zare Qenu",
@@ -35,5 +47,8 @@ export default defineNuxtConfig({
       '/api/__sitemap__/urls',
     ],
     cacheMaxAgeSeconds: 60 * 60,
+  },
+  tailwindcss: {
+    cssPath: ['~/assets/css/tailwind.css', {injectPosition: 'last'}],
   }
 })
