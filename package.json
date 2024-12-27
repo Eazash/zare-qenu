@@ -25,6 +25,7 @@
   },
   "packageManager": "pnpm@9.15.1",
   "devDependencies": {
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
     "wrangler": "^3.99.0"
   }
