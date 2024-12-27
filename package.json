@@ -15,6 +15,7 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.8.1",
     "@nuxthub/core": "0.8.10",
+    "@nuxtjs/robots": "5.1.0",
     "@nuxtjs/sitemap": "7.0.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "date-fns": "^4.1.0",
