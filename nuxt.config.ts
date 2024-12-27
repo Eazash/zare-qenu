@@ -21,6 +21,11 @@ export default defineNuxtConfig({
       standalone: false
     }
   },
+  hub: {
+    cache: true,
+    analytics: true,
+
+  },
   site: {
     url: "https://zare-qenu.com",
     name: "Zare Qenu",
@@ -28,6 +33,7 @@ export default defineNuxtConfig({
   sitemap: {
     sources: [
       '/api/__sitemap__/urls',
-    ]
+    ],
+    cacheMaxAgeSeconds: 60 * 60,
   }
 })
