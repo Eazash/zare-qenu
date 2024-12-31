@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxthub/core',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@vueuse/nuxt'
   ],
   eslint: {
     config: {
@@ -32,9 +33,7 @@ export default defineNuxtConfig({
   nitro: {
     routeRules: {
       '/' : {
-        cache: {
-          maxAge: 60 * 60 * 24
-        },
+        swr: true
       }
     }
   },

@@ -1,18 +1,32 @@
 <script setup lang="ts">
-const serverDate = useServerDate()
-
+import { Temporal } from 'temporal-polyfill';
 useServerSeoMeta({
   title: 'Today in the Ethiopic Calendar | ዛሬ በኢትዮጵያውያን ቀን አቆጣጠር',
-  description: `Today according to the Ethiopic Calendar ${serverDate.displayTime}`,
+  description: `Today according to the Ethiopic Calendar; a calendar that is 7-8 years behind Gregorian, has 13 months (12 of 30 days, 1 of 5-6), and starts on Sept 11/12.`,
+})
+
+const locale = new Intl.DateTimeFormat().resolvedOptions().locale
+const dateTime = ref(Temporal.Now.zonedDateTime('ethiopic'))
+useIntervalFn(() => {
+  dateTime.value = Temporal.Now.zonedDateTime('ethiopic')
+}, 1000)
+const dateTimeString = computed(() => {
+  return dateTime.value.toLocaleString(locale, {
+    calendar: 'ethiopic',
+    timeStyle: 'medium',
+  })
 })
 
 </script>
 <template>
-  <div class="flex gap-4 md:gap-8 lg:gap-12 flex-col items-center justify-center min-h-screen">
-    <h1 class="text-2xl font-bold flex flex-col gap-2 text-center"><span>Today according to the Ethiopic Calendar</span><span
-        class="font-noto-ethiopic font-3xl">ዛሬ ቀኑ እንደ ኢትዮጵያውያን ቀን አቆጣጠር</span>
-    </h1>
+  <div class="font-noto flex gap-4 md:gap-6 lg:gap-8 flex-col items-center justify-center min-h-screen">
+    <h1 class="text-2xl font-bold flex flex-col gap-2 text-center">Today according to the Ethiopic Calendar </h1>
+    <p class="font-bold font-3xl" lang="am">ዛሬ ቀኑ እንደ ኢትዮጵያውያን ቀን አቆጣጠር</p>
     <hr class="w-1/2 md:w-1/3 lg:w-1/4 border-t-2 border-gray-300">
-    <DateText as="h2"  class="text-4xl font-extrabold" />
+    <div class="flex gap-4 text-4xl w-full justify-center items-center">
+      <DateText as="span" class="font-bold" />
+      <span>:</span>
+      <span>{{ dateTimeString }}</span>
+    </div>
   </div>
 </template>

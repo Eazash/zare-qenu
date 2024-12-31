@@ -8,7 +8,7 @@ export default {
         'screen': '100svh 100dvh'
       },
       fontFamily: {
-        'noto-ethiopic': ['Noto Sans Ethiopic', 'sans-serif']
+        'noto-ethiopic': ['Noto Sans Ethiopic', 'Arial', 'sans-serif'],
       },
     },
   },
