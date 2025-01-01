@@ -33,7 +33,8 @@ export default defineNuxtConfig({
   nitro: {
     routeRules: {
       '/' : {
-        swr: true
+        swr: true,
+        prerender: true
       }
     }
   },

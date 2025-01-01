@@ -19,6 +19,7 @@
     "@nuxtjs/robots": "5.1.0",
     "@nuxtjs/sitemap": "7.0.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@unhead/vue": "^1.11.14",
     "date-fns": "^4.1.0",
     "nuxt": "^3.15.0",
     "temporal-polyfill": "^0.2.5",
