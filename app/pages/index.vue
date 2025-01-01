@@ -23,7 +23,7 @@ const dateTimeString = computed(() => {
     <h1 class="text-2xl font-bold flex flex-col gap-2 text-center">Today according to the Ethiopic Calendar </h1>
     <p class="font-bold font-3xl" lang="am">ዛሬ ቀኑ እንደ ኢትዮጵያውያን ቀን አቆጣጠር</p>
     <hr class="w-1/2 md:w-1/3 lg:w-1/4 border-t-2 border-gray-300">
-    <div class="flex gap-4 text-4xl w-full justify-center items-center">
+    <div class="flex gap-2 md:gap-4 text-2xl md:text-3xl w-full justify-center items-center">
       <DateText as="span" class="font-bold" />
       <span>:</span>
       <span>{{ dateTimeString }}</span>
