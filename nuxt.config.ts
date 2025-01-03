@@ -28,12 +28,14 @@ export default defineNuxtConfig({
   hub: {
     cache: true,
     analytics: true,
-
   },
   nitro: {
     routeRules: {
       '/' : {
         swr: true,
+        cache: {
+          maxAge: 60 * 60, // 1 hour
+        }
       }
     }
   },
