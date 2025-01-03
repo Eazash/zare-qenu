@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { Temporal } from 'temporal-polyfill';
 useServerSeoMeta({
   title: 'Today in the Ethiopic Calendar | ዛሬ በኢትዮጵያውያን ቀን አቆጣጠር',
   description: `Today according to the Ethiopic Calendar; a calendar that is 7-8 years behind Gregorian, has 13 months (12 of 30 days, 1 of 5-6), and starts on Sept 11/12.`,
 })
 
 const locale = new Intl.DateTimeFormat().resolvedOptions().locale
-const dateTime = ref(Temporal.Now.zonedDateTime('ethiopic'))
+const dateTime = ref(new Date())
 useIntervalFn(() => {
-  dateTime.value = Temporal.Now.zonedDateTime('ethiopic')
+  dateTime.value = new Date()
 }, 1000)
 const dateTimeString = computed(() => {
   return dateTime.value.toLocaleString(locale, {
