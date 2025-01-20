@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       height: {
-        'screen': '100dvh 100vh'
+        'screen': '100dvh'
       },
       fontFamily: {
         'noto-ethiopic': ['Noto Sans Ethiopic', 'Arial', 'sans-serif'],

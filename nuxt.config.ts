@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/fonts',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/image',
