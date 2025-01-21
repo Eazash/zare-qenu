@@ -18,7 +18,8 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n'
   ],
   eslint: {
     config: {
@@ -51,6 +52,26 @@ export default defineNuxtConfig({
     cacheMaxAgeSeconds: 60 * 60,
   },
   tailwindcss: {
-    cssPath: ['~/assets/css/tailwind.css', {injectPosition: 'last'}],
+    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'last' }],
+  },
+  icon: {
+    mode: 'svg',
+    clientBundle: {
+      icons: [
+        'ic:sharp-light-mode',
+        'ic:sharp-dark-mode',
+        'ic:round-monitor',
+        'ic:baseline-language'
+      ]
+    }
+  },
+  i18n: {
+    vueI18n: './i18n.config.ts',
+    baseUrl: 'https://zare-qenu.com',
+    locales: [
+      { code: 'en', language: 'en-US' },
+      { code: 'am', language: 'am-ET' }
+    ],
+    defaultLocale: 'en',
   }
 })

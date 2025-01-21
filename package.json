@@ -17,6 +17,7 @@
     "@nuxt/image": "^1.8.1",
     "@nuxthub/core": "0.8.10",
     "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/i18n": "9.1.1",
     "@nuxtjs/robots": "5.1.0",
     "@nuxtjs/sitemap": "7.0.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
@@ -29,6 +30,7 @@
   },
   "packageManager": "pnpm@9.15.1",
   "devDependencies": {
+    "@iconify-json/ic": "^1.2.2",
     "@vueuse/core": "^12.2.0",
     "@vueuse/nuxt": "12.2.0",
     "nuxthub": "^0.7.7",
