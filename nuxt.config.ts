@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light'
+  },
   compatibilityDate: '2024-10-21',
   devtools: { enabled: true },
   modules: [

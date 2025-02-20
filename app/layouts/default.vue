@@ -3,9 +3,8 @@ const { $colorMode, $i18n } = useNuxtApp()
 const { state, next } = useCycleList([
   ['light', 'ic:sharp-light-mode',],
   ['dark', 'ic:sharp-dark-mode'],
-  ['system', 'ic:round-monitor']
 ], {
-  initialValue: ['system', 'ic:round-monitor']
+  initialValue: ['light', 'ic:sharp-light-mode']
 })
 
 const i18nHead = useLocaleHead()
